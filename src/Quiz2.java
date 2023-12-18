@@ -7,11 +7,11 @@ public class Quiz2 implements ActionListener {
     static int count;
     JFrame frame = new JFrame();
     JLabel Title = new JLabel("Quiz Question 2");
-    JLabel question2 = new JLabel("2) Which is the container that doesn't contain a title bar and MenuBars but it can have other components like button, textfield, etc?");
-    JCheckBox answer1 = new JCheckBox("a. Window");
-    JCheckBox answer2 = new JCheckBox("b. Frame");
-    JCheckBox answer3 = new JCheckBox("c. Panel");
-    JCheckBox answer4 = new JCheckBox("d. Container");
+    JLabel question2 = new JLabel("2) Which of the following is used to prevent a method from being overridden in a subclass?");
+    JCheckBox answer1 = new JCheckBox("a. abstract");
+    JCheckBox answer2 = new JCheckBox("b. final");
+    JCheckBox answer3 = new JCheckBox("c. static");
+    JCheckBox answer4 = new JCheckBox("d. override");
     JButton submitButton = new JButton("Submit");
 
     Quiz2(int count) {
@@ -79,19 +79,19 @@ public class Quiz2 implements ActionListener {
         if (e.getSource() == submitButton) {
             String answer = null;
             if (answer1.isSelected()) {
-                answer = "a. Window";
+                answer = "a. abstract";
             }
             if (answer2.isSelected()) {
-                answer = "b. Frame";
+                answer = "b. final";
             }
             if (answer3.isSelected()) {
-                answer = "c. Panel";
+                answer = "c. static";
             }
             if (answer4.isSelected()) {
-                answer = "d. Container";
+                answer = "d. override";
             }
 
-            if ("c. Panel".equals(answer)) {
+            if ("b. final".equals(answer)) {
                 JOptionPane.showMessageDialog(null, "Correct Answer");
                 count++;
                 Quiz3 q3 = new Quiz3(count); // Uncomment if you have a Quiz3 class

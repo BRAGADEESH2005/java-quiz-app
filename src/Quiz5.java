@@ -6,12 +6,12 @@ import java.awt.event.ActionListener;
 public class Quiz5 implements ActionListener {
     static int count;
     JFrame frame = new JFrame();
-    JLabel Title = new JLabel("Quiz Question 3");
-    JLabel question3 = new JLabel("3) Which is the container that doesn't contain a title bar and MenuBars but it can have other components like button, textfield, etc?");
-    JCheckBox answer1 = new JCheckBox("a. Window");
-    JCheckBox answer2 = new JCheckBox("b. Frame");
-    JCheckBox answer3 = new JCheckBox("c. Panel");
-    JCheckBox answer4 = new JCheckBox("d. Container");
+    JLabel Title = new JLabel("Quiz Question 5");
+    JLabel question3 = new JLabel("5) What is the purpose of the 'super' keyword in Java?");
+    JCheckBox answer1 = new JCheckBox("a. To call the superclass constructor");
+    JCheckBox answer2 = new JCheckBox("b. To access the superclass's static members");
+    JCheckBox answer3 = new JCheckBox("c. To refer to the current object");
+    JCheckBox answer4 = new JCheckBox("d. To indicate that a method is overridden");
     JButton submitButton = new JButton("Submit");
 
     Quiz5(int count) {
@@ -79,27 +79,29 @@ public class Quiz5 implements ActionListener {
         if (e.getSource() == submitButton) {
             String answer = null;
             if (answer1.isSelected()) {
-                answer = "a. Window";
+                answer = "a. To call the superclass constructor";
             }
             if (answer2.isSelected()) {
-                answer = "b. Frame";
+                answer = "b. To access the superclass's static members";
             }
             if (answer3.isSelected()) {
-                answer = "c. Panel";
+                answer = "c. To refer to the current object";
             }
             if (answer4.isSelected()) {
-                answer = "d. Container";
+                answer = "d. To indicate that a method is overridden";
             }
 
-            if ("c. Panel".equals(answer)) {
+            if ("a. To call the superclass constructor".equals(answer)) {
                 JOptionPane.showMessageDialog(null, "Correct Answer");
                 count++;
-                Quiz6 q6 = new Quiz6(count); // Uncomment if you have a Quiz5 class
-                frame.setVisible(false);
+                JOptionPane.showMessageDialog(null, "Your Score is " + count);
+                frame.dispose();
+                HomePage h = new HomePage();
             } else {
                 JOptionPane.showMessageDialog(null, "Wrong Answer");
-                Quiz6 q6 = new Quiz6(count); // Uncomment if you have a Quiz5 class
-                frame.setVisible(false);
+                JOptionPane.showMessageDialog(null, "Your Score is " + count);
+                frame.dispose();
+                HomePage h = new HomePage();
             }
         }
     }

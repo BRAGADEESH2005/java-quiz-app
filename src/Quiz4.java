@@ -6,12 +6,12 @@ import java.awt.event.ActionListener;
 public class Quiz4 implements ActionListener {
     static int count;
     JFrame frame = new JFrame();
-    JLabel Title = new JLabel("Quiz Question 3");
-    JLabel question3 = new JLabel("3) Which is the container that doesn't contain a title bar and MenuBars but it can have other components like button, textfield, etc?");
-    JCheckBox answer1 = new JCheckBox("a. Window");
-    JCheckBox answer2 = new JCheckBox("b. Frame");
-    JCheckBox answer3 = new JCheckBox("c. Panel");
-    JCheckBox answer4 = new JCheckBox("d. Container");
+    JLabel Title = new JLabel("Quiz Question 4");
+    JLabel question3 = new JLabel("4)In Java, which keyword is used to implement multiple inheritances of interfaces?");
+    JCheckBox answer1 = new JCheckBox("a. extends");
+    JCheckBox answer2 = new JCheckBox("b. implements");
+    JCheckBox answer3 = new JCheckBox("c. inherits");
+    JCheckBox answer4 = new JCheckBox("d. interface");
     JButton submitButton = new JButton("Submit");
 
     Quiz4(int count) {
@@ -79,19 +79,19 @@ public class Quiz4 implements ActionListener {
         if (e.getSource() == submitButton) {
             String answer = null;
             if (answer1.isSelected()) {
-                answer = "a. Window";
+                answer = "a. extends";
             }
             if (answer2.isSelected()) {
-                answer = "b. Frame";
+                answer = "b. implements";
             }
             if (answer3.isSelected()) {
-                answer = "c. Panel";
+                answer = "c. inherits";
             }
             if (answer4.isSelected()) {
-                answer = "d. Container";
+                answer = "d. interface";
             }
 
-            if ("c. Panel".equals(answer)) {
+            if ("b. implements".equals(answer)) {
                 JOptionPane.showMessageDialog(null, "Correct Answer");
                 count++;
                 Quiz5 q5 = new Quiz5(count); // Uncomment if you have a Quiz4 class

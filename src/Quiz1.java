@@ -7,11 +7,11 @@ public class Quiz1 implements ActionListener {
     static int count;
     JFrame frame = new JFrame();
     JLabel Title = new JLabel("Quiz Question 1");
-    JLabel question1 = new JLabel("1) Which is the container that doesn't contain a title bar and MenuBars but it can have other components like button, textfield, etc?");
-    JCheckBox answer1 = new JCheckBox("a. Window");
-    JCheckBox answer2 = new JCheckBox("b. Frame");
-    JCheckBox answer3 = new JCheckBox("c. Panel");
-    JCheckBox answer4 = new JCheckBox("d. Container");
+    JLabel question1 = new JLabel("1) What is the correct way to declare a constant variable in Java?");
+    JCheckBox answer1 = new JCheckBox("a. final int constantVar = 10;");
+    JCheckBox answer2 = new JCheckBox("b. const int constantVar = 10;");
+    JCheckBox answer3 = new JCheckBox("c. static final int constantVar = 10;");
+    JCheckBox answer4 = new JCheckBox("d. final static int constantVar = 10;");
     JButton submitButton = new JButton("Submit");
 
     Quiz1() {
@@ -78,19 +78,19 @@ public class Quiz1 implements ActionListener {
         if (e.getSource() == submitButton) {
             String answer = null;
             if (answer1.isSelected()) {
-                answer = "a. Window";
+                answer = "a. final int constantVar = 10;";
             }
             if (answer2.isSelected()) {
-                answer = "b. Frame";
+                answer = "b. const int constantVar = 10;";
             }
             if (answer3.isSelected()) {
-                answer = "c. Panel";
+                answer = "c. static final int constantVar = 10;";
             }
             if (answer4.isSelected()) {
-                answer = "d. Container";
+                answer = "d. final static int constantVar = 10;";
             }
 
-            if ("c. Panel".equals(answer)) { // Use .equals() for string comparison
+            if ("c. static final int constantVar = 10;".equals(answer)) { // Use .equals() for string comparison
                 JOptionPane.showMessageDialog(null, "Correct Answer");
                 count++;
                 Quiz2 q2 = new Quiz2(count); // Uncomment if you have a Quiz2 class
